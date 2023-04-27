@@ -1,0 +1,14 @@
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="obj.img" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ obj.raza}}</h5>
+    <p>
+      <strong>{{ obj.origen }}</strong>
+    </p>
+    <p class="card-text"><strong>Peso</strong> {{ obj.peso }}</p>
+    <p class="card-text"><strong>Guardian</strong> {{ obj.guardian }}</p>
+    <a [routerLink]="['/mascotas/',obj.id]"  class="btn btn-primary">Leer más</a>
+   <a (click)="eliminarPets(obj)" class="btn btn-warning m-1">Quitar</a>
+  </div>
+</div>
