@@ -14,7 +14,9 @@ const routes: Routes = [
       { path: 'home', loadChildren: () => import('@modules/home/home.module').then((m) => m.HomeModule) },
       { path: 'directivas', loadChildren: () => import('@modules/directivas/directivas.module').then((m) => m.DirectivasModule) },
       { path : 'mascotas', loadChildren : () => import('@modules/mascotas/mascotas.module').then((m) => m.MascotasModule) },
-      { path: 'formulario', component:FormularioComponent }
+      { path: 'formulario', component:FormularioComponent },
+      { path : 'anime', loadChildren : () => import('@modules/anime/anime.module').then((m) => m.AnimeModule)},
+      { path : 'carga', loadChildren : () => import('@modules/carga-file/carga-file.module').then((m) => m.CargaFileModule)},
     ]
   },
 

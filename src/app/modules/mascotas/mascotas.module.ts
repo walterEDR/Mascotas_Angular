@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { MascotasRoutingModule } from './mascotas-routing.module';
 import { CardComponent } from './components/card/card.component';
 import { ListarComponent } from './page/listar/listar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MascotaComponent } from './page/mascota/mascota.component';
+import { NuevoComponent } from './page/nuevo/nuevo.component';
+import { ImagenEmptyPipe } from './pipes/imagen-empty.pipe';
+
 
 
 @NgModule({
@@ -13,13 +16,14 @@ import { MascotaComponent } from './page/mascota/mascota.component';
     CardComponent,
     ListarComponent,
     MascotaComponent,
-
-
-  ],
+    NuevoComponent,
+    ImagenEmptyPipe,
+    ],
   imports: [
     CommonModule,
     MascotasRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class MascotasModule { }

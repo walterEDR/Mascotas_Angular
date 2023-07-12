@@ -4,7 +4,9 @@
   <div class="container">
     <!-- espacio para el nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4">
+
       <div class="container-fluid">
+
         <a class="navbar-brand" href="#">
           <!-- aqui va el logo -->
           <img width="30%" alt="" [src]="logo"> Diplomado
@@ -47,6 +49,15 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div>
+        <a class="btn btn-dark" [routerLink]="['carga/simple']">CargaArchivo</a>
+      </div>
+      <div>
+        <a class="btn btn-dark" [routerLink]="['formulario']">Formulario</a>
+      </div>
+      <div>
+        <a class="btn btn-dark" [routerLink]="['anime/listaranime']">Scroll Inifinito</a>
       </div>
     </nav>
     <!-- fin espacio para el nav -->

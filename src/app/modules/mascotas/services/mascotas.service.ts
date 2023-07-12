@@ -49,6 +49,20 @@ export class MascotasService {
       return this.http.delete<IMascota>(`${this.baseUrl}/mascotas/${id}`);
     }
 
+    nuevaMascota(pet : IMascota): any {
+      console.log(pet);
+      const url = `${this.baseUrl}/mascotas/`;
+      return this.http.post(url,pet);
+    }
+
+    editarMascota(pet : IMascota): any {
+      console.log(pet);
+      const url = `${this.baseUrl}/mascotas/${pet.id}`;
+      return this.http.put(url,pet);
+    }
+
+    
+
 
 
 }
