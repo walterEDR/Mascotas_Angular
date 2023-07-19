@@ -31,7 +31,7 @@ export class CalendarioComponent implements OnInit {
 
   formEditEvento !: FormGroup;
   editEvento !: EventImpl;
-  calendarEvent !: EventImpl[];
+  calendarEvent !: EventInput[];
 
 
   constructor (private modalService: BsModalService, private fb:FormBuilder){}
@@ -100,6 +100,8 @@ export class CalendarioComponent implements OnInit {
     this.formEvento = this.fb.group({
       title : '',
     });
+    this.modalRef?.hide();
+  
   }
 
   hanleEventClick(datos : EventClickArg){
@@ -116,9 +118,11 @@ export class CalendarioComponent implements OnInit {
       value.id+'' === this.editEvento.id+''});
       this.editEvento.setProp('title', editTitle);
 
-      this.calendarEvent[editId] = {...this.editEvento, title : editTitle,
+      this.calendarEvent[editId] = {
+        ...this.editEvento,
+         title : editTitle,
       id : this.editEvento.id,
-    classNames : 'bg-success text-white',};
+      classNames : 'bg-success text-white',};
 
     this.formEditEvento = this.fb.group({
       editTitle : '',
